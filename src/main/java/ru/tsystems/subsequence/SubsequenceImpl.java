@@ -53,7 +53,7 @@ public class SubsequenceImpl implements Subsequence {
     //для объектов с разными ссылками, но одинаковыми полями.
     private static String toString(Object object) throws IllegalAccessException {
         Class classOfObject = object.getClass(); //узнаем класс указанного объекта
-        String result = "> ";
+        String result = "> "+ object.getClass().getName() + ": ";
 
         Field[] fields = classOfObject.getDeclaredFields();//получаем массив полей оъекта
         for (Field field : fields) {
